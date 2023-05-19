@@ -1,4 +1,5 @@
 var express = require("express");
+const { asureAuth } = require("../middlewares/asureAuth");
 var router = express.Router();
 
 const PaymentController = require("../controllers/PaymentController");
@@ -10,11 +11,11 @@ router.get("/", function (req, res, next) {
   res.json({ message: "Welcome to the API" });
 });
 
-router.get("/payment", (req, res) => {
+router.get("/payment", asureAuth,  (req, res) => {
   PaymentInstance.getPaymentLink(req, res);
 });
 
-router.get("/subscription", (req, res) => {
+router.get("/subscription", asureAuth ,(req, res) => {
   PaymentInstance.getSubscriptionLink(req, res);
 });
 
