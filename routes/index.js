@@ -11,7 +11,7 @@ router.get("/", function (req, res, next) {
   res.json({ message: "Welcome to the API" });
 });
 
-router.get("/payment", asureAuth,  (req, res) => {
+router.get("/payment",   (req, res) => {
   PaymentInstance.getPaymentLink(req, res);
 });
 
