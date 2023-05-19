@@ -1,0 +1,7 @@
+vendedor prueba --
+user: TTEST52994
+pass: a2b9d100#03f4#440f#
+
+comprador prueba --
+user: TESTT78667
+pass: tbTavuVp8e
